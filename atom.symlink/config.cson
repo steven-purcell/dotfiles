@@ -1,9 +1,15 @@
 "*":
+  "atom-terminal":
+    app: "iterm2.app"
+  "autocomplete-elixir":
+    elixirPath: "/usr/local/bin"
+    erlangHome: "/usr/local/bin"
   core:
     disabledPackages: [
       "background-tips"
       "exception-reporting"
       "metrics"
+      "vim-mode-plus-ex-mode"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -15,10 +21,6 @@
       "tmp"
       "vendor"
     ]
-    themes: [
-      "unity-ui"
-      "glacier-syntax"
-    ]
   editor:
     fontFamily: "Menlo"
     invisibles: {}
@@ -26,6 +28,11 @@
     softWrapAtPreferredLineLength: true
   "go-plus":
     goPath: "/Users/holman/Code/go"
+  "omnisharp-atom":
+    altGotoDefinition: true
+    enhancedHighlighting: true
+    useLeftLabelColumnForSuggestions: true
+    wantMetadata: true
   "release-notes":
     viewedVersion: "0.89.0"
   "spell-check":
@@ -35,5 +42,7 @@
       "text.git-commit"
       "text.html.basic"
     ]
+  "tree-view": {}
+  "vim-mode": {}
   welcome:
     showOnStartup: false

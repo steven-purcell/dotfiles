@@ -1,0 +1,19 @@
+'.platform-darwin':
+  'ctrl-l': 'nerd-treeview:toggle-focus'
+  'ctrl-h': 'nerd-treeview:toggle-focus'
+  'ctrl-n': 'nerd-treeview:toggle'
+
+'atom-text-editor.vim-mode:not(.normal-mode)':
+  'ctrl-j': 'vim-mode:activate-normal-mode'
+
+'atom-text-editor.vim-mode.normal-mode':
+  'space': 'vim-mode:search'
+
+'body':
+  'cmd-q': 'core:close'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'shift-enter': 'atom-terminal-panel:toggle'
+
+'.platform-darwin atom-workspace':
+  'shift-enter': 'atom-terminal-panel:toggle'
