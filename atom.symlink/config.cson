@@ -1,15 +1,25 @@
 "*":
   "atom-terminal":
-    app: "iterm2.app"
+    app: "iTerm.app"
   "autocomplete-elixir":
     elixirPath: "/usr/local/bin"
     erlangHome: "/usr/local/bin"
+  "autoupdate-packages":
+    lastUpdateTimestamp: 1465171866949
   core:
     disabledPackages: [
       "background-tips"
       "exception-reporting"
       "metrics"
       "vim-mode-plus-ex-mode"
+      "atom-terminal-panel"
+      "neon-cursor"
+      "neon-selection"
+      "symbols-tree-view"
+      "talk-like-a-pirate"
+      "tree-view-git-branch"
+      "npm-outdated"
+      "autoupdate-packages"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -23,9 +33,11 @@
     ]
   editor:
     fontFamily: "Menlo"
+    fontSize: 15
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
+  "file-icons": {}
   "go-plus":
     goPath: "/Users/holman/Code/go"
   "omnisharp-atom":
@@ -46,3 +58,4 @@
   "vim-mode": {}
   welcome:
     showOnStartup: false
+  "yuno-commit-plus": {}
