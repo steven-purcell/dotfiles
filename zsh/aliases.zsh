@@ -26,3 +26,6 @@ alias lsg='ll | grep'
 
 # zsh profile editing
 alias ze='$EDITOR ~/.zshrc'
+
+# Homebrew
+alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
