@@ -7,7 +7,6 @@ then
 fi
 
 # The rest of my fun git aliases
-alias gl='git pull --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gp='git push origin HEAD'
 alias gd='git diff'
@@ -19,9 +18,60 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gac='git add -A && git commit -m'
 
+alias gs='git status'
+alias gstsh='git stash'
+alias gst='git stash'
+alias gsp='git stash pop'
+alias gsa='git stash apply'
+alias gsh='git show'
+alias gshw='git show'
+alias gshow='git show'
+alias gi='atom .gitignore'
+alias ga='git add -A'
+alias gap='git add -p'
+alias guns='git unstage'
+alias gunc='git uncommit'
+alias gm='git merge'
+alias gms='git merge --squash'
+alias gam='git amend --reset-author'
+alias grv='git remote -v'
+alias grr='git remote rm'
+alias grad='git remote add'
+alias gr='git rebase'
+alias gra='git rebase --abort'
+alias ggrc='git rebase --continue'
+alias gbi='git rebase --interactive'
+alias gf='git fetch'
+alias gfp='git fetch --prune'
+alias gfa='git fetch --all'
+alias gfap='git fetch --all --prune'
+alias gfch='git fetch'
+alias gd='git diff'
+# Staged and cached are the same thing
+alias gdc='git diff --cached -w'
+alias gds='git diff --staged -w'
+alias gpub='grb publish'
+alias gtr='grb track'
+alias gpl='git pull'
+alias gplr='git pull --rebase'
+alias gps='git push'
+alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
+alias grs='git reset'
+alias grsh='git reset --hard'
+alias gcln='git clean'
+alias gclndf='git clean -df'
+alias gclndfx='git clean -dfx'
+alias gsm='git submodule'
+alias gsmi='git submodule init'
+alias gsmu='git submodule update'
+alias gbg='git bisect good'
+alias gbb='git bisect bad'
+alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+
 
 #
 # git-flow cheats
+# brew info git-flow-avh
 # brew install git-flow-avh
 #
 # init      Initialize a new git repo with support for the branching model.
