@@ -1,10 +1,18 @@
+# Reload it all
 alias reload!='. ~/.zshrc'
+alias r!='. ~/.zshrc'
 
-alias cls='clear' # Good 'ol Clear Screen command
-
-alias la='ls -a'
-
+# Code
+alias apis='cd ~/src/gbw/apis'
+alias code='cd ~/src'
+alias data='cd ~/src/gbw/data'
+alias oss='cd ~/src/oss'
+alias s='cd ~/src'
+alias serv='cd ~/src/gbw/serv'
 alias src='cd ~/src'
+alias sync='cd ~/src/gbw/sync'
+alias tmp='cd ~/src/tmp'
+alias tool='cd ~/src/tools'
 
 # PS
 alias psa="ps aux"
@@ -18,13 +26,13 @@ alias cls='clear;ls'
 alias df='df -h'
 alias du='du -h -d 2'
 
+alias la='ls -a'
 alias ll='ls -alGh'
 alias ls='ls -Gh'
-
-# show me files matching "ls grep"
 alias lsg='ll | grep'
 
-# zsh profile editing
+# editing
+alias de='$EDITOR ~/.dotfiles'
 alias ze='$EDITOR ~/.zshrc'
 
 # Homebrew

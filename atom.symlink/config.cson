@@ -45,6 +45,7 @@
   "omnisharp-atom":
     altGotoDefinition: true
     enhancedHighlighting: true
+    showDiagnosticsForAllSolutions: true
     useLeftLabelColumnForSuggestions: true
     wantMetadata: true
   "release-notes":
@@ -56,6 +57,12 @@
       "text.git-commit"
       "text.html.basic"
     ]
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "tree-view": {}
   "vim-mode": {}
   welcome:
