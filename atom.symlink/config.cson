@@ -21,6 +21,11 @@
       "npm-outdated"
       "autoupdate-packages"
       "file-icons"
+      "linter-eslint"
+      "linter"
+      "omnisharp-atom"
+      "linter-docker"
+      "json-schema"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: false

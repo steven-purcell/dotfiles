@@ -10,6 +10,8 @@ brew 'erlang'
 brew 'elixir'
 brew 'httpie'
 brew 'gist'
+brew 'mariadb'
+brew 'macvim', args: ['HEAD', 'with-lua', 'with-luajit', 'with-override-system-vim']
 
 cask 'atom'
 cask 'hipchat'
@@ -27,3 +29,4 @@ cask 'querious'
 cask 'gitifier'
 
 mas 'microsoft-remote-desktop', id: 715768417
+mas 'ipulse', id: 1028916583

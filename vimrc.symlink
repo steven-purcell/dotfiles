@@ -1,0 +1,69 @@
+syntax on
+
+call plug#begin('~/.vim/plugged')
+
+" VIM: wrap gitcommit file types at the appropriate length
+filetype indent plugin on
+
+" VIM: better windows navigating
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" NERDTree: open when vim opens
+autocmd vimenter * NERDTree
+
+" NERDTree: open when C-n
+map <C-n> :NERDTreeToggle<CR>
+
+" NERDTree: change arrows
+let g:NERDTreeDirArrowExpandable = '•'
+let g:NERDTreeDirArrowCollapsible = '.'
+
+" Airline: tabline enabled
+let g:airline#extensions#tabline#enabled = 1
+
+" Airline: tabline change tabs
+:nnoremap <C-[> :bprevious<CR>
+:nnoremap <C-]> :bnext<CR>
+
+" Airline: use powerline fonts
+let g:airline_powerline_fonts = 1
+
+" Airline: show status line all the time
+set laststatus=2
+
+" Plug: plugins
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'chriskempson/base16-vim'
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jasoncodes/ctrlp-modified.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'ivalkeen/vim-ctrlp-tjump'
+Plug 'sgur/ctrlp-extensions.vim'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'easymotion/vim-easymotion'
+Plug 'edsono/vim-matchit'
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-abolish'
+Plug 'ervandew/supertab'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/neocomplete.vim'
+Plug 'vim-scripts/winresizer.vim'
+
+" Add plugins to &runtimepath
+call plug#end()
+
+" Colorscheme
+let base16colorspace=256
+set background=dark
+colorscheme base16-ocean
+

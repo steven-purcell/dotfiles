@@ -14,6 +14,10 @@ alias sync='cd ~/src/gbw/sync'
 alias tmp='cd ~/src/tmp'
 alias tool='cd ~/src/tools'
 
+# MacVim
+alias vim='mvim -v'
+alias v='mvim -v .'
+
 # PS
 alias psa="ps aux"
 alias psg="ps aux | grep "
