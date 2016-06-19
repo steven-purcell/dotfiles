@@ -2,37 +2,84 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
-" VIM: wrap gitcommit file types at the appropriate length
+
+"""""""""""""""""""""""""""""""""
+" VIM:
+"""""""""""""""""""""""""""""""""
+" wrap gitcommit file types at the appropriate length
 filetype indent plugin on
 
-" VIM: better windows navigating
+" better windows navigating
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" NERDTree: open when vim opens
+
+"""""""""""""""""""""""""""""""""
+" NERDTree:
+"""""""""""""""""""""""""""""""""
+" open when vim opens
 "autocmd vimenter * NERDTree
 
-" NERDTree: open when C-n
+" open when C-n
 map <C-n> :NERDTreeToggle<CR>
 
-" NERDTree: change arrows
+" change arrows
 let g:NERDTreeDirArrowExpandable = '•'
 let g:NERDTreeDirArrowCollapsible = '.'
 
-" Airline: tabline enabled
+
+"""""""""""""""""""""""""""""""""
+" Airline:
+"""""""""""""""""""""""""""""""""
+" tabline enabled
 let g:airline#extensions#tabline#enabled = 1
 
-" Airline: use powerline fonts
+" use powerline fonts
 let g:airline_powerline_fonts = 1
 
-" Airline: show status line all the time
+" show status line all the time
 set laststatus=2
 
-" Plug: plugins
+
+"""""""""""""""""""""""""""""""""
+" ESlint:
+"""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+
+
+"""""""""""""""""""""""""""""""""
+" Plug:
+"""""""""""""""""""""""""""""""""
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/winresizer.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
 Plug 'chriskempson/base16-vim'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
@@ -46,20 +93,18 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'easymotion/vim-easymotion'
 Plug 'edsono/vim-matchit'
 Plug 'sjl/gundo.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-abolish'
 Plug 'ervandew/supertab'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/neocomplete.vim'
-Plug 'vim-scripts/winresizer.vim'
+Plug 'elzr/vim-json'
+Plug 'mileszs/ack.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
 
+"""""""""""""""""""""""""""""""""
 " Colorscheme
+"""""""""""""""""""""""""""""""""
 let base16colorspace=256
 set background=dark
-colorscheme base16-ocean
+colorscheme base16-pop
 
