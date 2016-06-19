@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 """""""""""""""""""""""""""""""""
 " wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+" enable omnicomplete
 set omnifunc=syntaxcomplete#Complete
 
 " better windows navigating
@@ -15,6 +17,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" use spaces for all indentation
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 
 """""""""""""""""""""""""""""""""
@@ -74,33 +81,36 @@ highlight link SyntasticStyleWarningSign SignColumn
 """""""""""""""""""""""""""""""""
 " Ternjs: run `npm install` the first time
 " .dotfiles/vim.symlink/plugged/tern_for_vim
+Plug 'airblade/vim-gitgutter'
+Plug 'chrisbra/csv.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'edsono/vim-matchit'
+Plug 'elzr/vim-json'
+Plug 'ervandew/supertab'
+Plug 'garbas/vim-snipmate'
+Plug 'ivalkeen/vim-ctrlp-tjump'
+Plug 'jasoncodes/ctrlp-modified.vim'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'mileszs/ack.vim'
+Plug 'othree/yajs.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'sgur/ctrlp-extensions.vim'
+Plug 'sjl/gundo.vim'
+Plug 'suan/vim-instant-markdown'
 Plug 'ternjs/tern_for_vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/winresizer.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-abolish'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
-Plug 'chriskempson/base16-vim'
-Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jasoncodes/ctrlp-modified.vim'
-Plug 'ivalkeen/vim-ctrlp-tjump'
-Plug 'sgur/ctrlp-extensions.vim'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'easymotion/vim-easymotion'
-Plug 'edsono/vim-matchit'
-Plug 'sjl/gundo.vim'
-Plug 'ervandew/supertab'
-Plug 'elzr/vim-json'
-Plug 'mileszs/ack.vim'
-Plug 'othree/yajs.vim'
-Plug 'suan/vim-instant-markdown'
 
 " Add plugins to &runtimepath
 call plug#end()
