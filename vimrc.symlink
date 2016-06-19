@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 """""""""""""""""""""""""""""""""
 " wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " better windows navigating
 nnoremap <C-h> <C-w>h
@@ -26,8 +27,8 @@ nnoremap <C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
 
 " change arrows
-let g:NERDTreeDirArrowExpandable = '•'
-let g:NERDTreeDirArrowCollapsible = '.'
+let g:NERDTreeDirArrowExpandable = '৩'
+let g:NERDTreeDirArrowCollapsible = '২'
 
 
 """""""""""""""""""""""""""""""""
@@ -57,10 +58,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
+let g:syntastic_error_symbol = 'ȩ'
+let g:syntastic_style_error_symbol = 'ȿȩ'
+let g:syntastic_warning_symbol = 'Ŵ'
+let g:syntastic_style_warning_symbol = 'ȿŴ'
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
@@ -71,6 +72,9 @@ highlight link SyntasticStyleWarningSign SignColumn
 """""""""""""""""""""""""""""""""
 " Plug:
 """""""""""""""""""""""""""""""""
+" Ternjs: run `npm install` the first time
+" .dotfiles/vim.symlink/plugged/tern_for_vim
+Plug 'ternjs/tern_for_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/winresizer.vim'
@@ -93,10 +97,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'edsono/vim-matchit'
 Plug 'sjl/gundo.vim'
 Plug 'ervandew/supertab'
-Plug 'Shougo/neocomplete.vim'
 Plug 'elzr/vim-json'
 Plug 'mileszs/ack.vim'
 Plug 'othree/yajs.vim'
+Plug 'suan/vim-instant-markdown'
 
 " Add plugins to &runtimepath
 call plug#end()
