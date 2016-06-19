@@ -36,8 +36,12 @@ alias ls='ls -Gh'
 alias lsg='ll | grep'
 
 # editing
-alias de='$EDITOR ~/.dotfiles'
-alias ze='$EDITOR ~/.zshrc'
+alias de='mvim -v ~/.dotfiles'
+alias ze='mvim -v ~/.zshrc'
+alias ve='mvim -v ~/.vimrc'
+alias ae='mvim -v ~/.dotfiles/zsh/aliases.zsh'
+alias pe='mvim -v ~/.dotfiles/zsh/prompt.zsh'
+alias ge='mvim -v ~/.dotfiles/git/aliases.zsh'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
