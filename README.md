@@ -11,34 +11,12 @@ structured the project accordingly.
 If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read my post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
-jjjj
 
 ## topical
 
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Java" — you can simply add a `java` directory and put
 files in there. Anything with an extension of `.zsh` will get automatically
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
@@ -87,6 +65,20 @@ which sets up a few paths that'll be different on your particular machine.
 defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
+
+## vim
+
+So much vim goodness in here it hurts.
+
+pres:
+* [macvim --HEAD --with-lua --with-luajit --with-override-system-vim](https://github.com/macvim-dev/macvim)
+* [npm install instant-markdown-d](https://www.npmjs.com/package/instant-markdown-d)
+* [patched powerline-fonts](https://github.com/powerline/fonts)
+* [ack](http://beyondgrep.com/install/)
+
+## atom
+
+I tried out Atom for about 3 weeks... puked a lot.
 
 ## bugs
 

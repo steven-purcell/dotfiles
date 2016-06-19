@@ -30,8 +30,8 @@ set softtabstop=2
 " open when vim opens
 "autocmd vimenter * NERDTree
 
-" open when C-n
-map <C-n> :NERDTreeToggle<CR>
+" open when C-j
+map <C-j> :NERDTreeToggle<CR>
 
 " change arrows
 let g:NERDTreeDirArrowExpandable = '৩'
@@ -86,6 +86,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'edsono/vim-matchit'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
