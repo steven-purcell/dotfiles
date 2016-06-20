@@ -31,7 +31,7 @@ set softtabstop=2
 "autocmd vimenter * NERDTree
 
 " open when C-j
-map <C-j> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " change arrows
 let g:NERDTreeDirArrowExpandable = '৩'
@@ -96,6 +96,7 @@ Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'mileszs/ack.vim'
+Plug 'moll/vim-node'
 Plug 'othree/yajs.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -104,7 +105,6 @@ Plug 'sgur/ctrlp-extensions.vim'
 Plug 'sjl/gundo.vim'
 Plug 'suan/vim-instant-markdown'
 Plug 'ternjs/tern_for_vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'

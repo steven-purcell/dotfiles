@@ -1,11 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/rocky.assad/src/gbw/serv/medication-service'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/rocky.assad/.dotfiles/script'
 let g:netrw_dirhist_2='/Users/rocky.assad/.dotfiles'
-let g:netrw_dirhist_3='/Users/rocky.assad/.dotfiles/system'
-let g:netrw_dirhist_4='/Users/rocky.assad/.dotfiles'
-let g:netrw_dirhist_5='/Users/rocky.assad/src/gbw/serv/medication-service'
-let g:netrw_dirhist_6='/Users/rocky.assad/.dotfiles'
-let g:netrw_dirhist_7='/Users/rocky.assad/src/gbw/serv/medication-service'
-let g:netrw_dirhist_8='/Users/rocky.assad/.dotfiles'
-let g:netrw_dirhist_9='/Users/rocky.assad/src/gbw/serv/medication-service'
+let g:netrw_dirhist_3='/Users/rocky.assad/src/gbw/serv/medication-service'
+let g:netrw_dirhist_4='/Users/rocky.assad/src/gbw/serv/notification-service'
+let g:netrw_dirhist_5='/Users/rocky.assad/src/gbw/serv/notification-service/config'
+let g:netrw_dirhist_6='/Users/rocky.assad/src/proxy/nextgen-proxy'
