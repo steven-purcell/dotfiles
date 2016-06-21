@@ -13,7 +13,6 @@ brew 'gist'
 brew 'mariadb'
 brew 'macvim', args: ['HEAD', 'with-lua', 'with-luajit', 'with-override-system-vim']
 
-cask 'atom'
 cask 'hipchat'
 cask 'chromium'
 cask 'spectacle'

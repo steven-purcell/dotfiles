@@ -9,6 +9,20 @@ call plug#begin('~/.vim/plugged')
 " wrap gitcommit file types at the appropriate length
 filetype indent plugin on
 
+" no cowbells
+set noerrorbells
+
+" don't make it look like there are line breaks where there aren't:
+set nowrap
+
+" encoding
+set encoding=utf-8
+set fileencoding=utf-8
+
+" avoid tmp files in projects
+set backupdir=~/.bak
+set directory=~/.swp
+
 " enable omnicomplete
 set omnifunc=syntaxcomplete#Complete
 
@@ -17,6 +31,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" remove tailing white space
+command T %s/\s\+$//
 
 " use spaces for all indentation
 set expandtab
@@ -104,6 +121,7 @@ Plug 'scrooloose/syntastic'
 Plug 'sgur/ctrlp-extensions.vim'
 Plug 'sjl/gundo.vim'
 Plug 'suan/vim-instant-markdown'
+Plug 'takac/vim-spotifysearch'
 Plug 'ternjs/tern_for_vim'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-abolish'
