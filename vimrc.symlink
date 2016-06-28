@@ -92,6 +92,11 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
+"""""""""""""""""""""""""""""""""
+" YUNO:
+"""""""""""""""""""""""""""""""""
+" show dude when 10 modifications
+let g:YUNOcommit_after = 10
 
 """""""""""""""""""""""""""""""""
 " Plug:
@@ -107,11 +112,14 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'edsono/vim-matchit'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
+Plug 'esneider/YUNOcommit.vim'
 Plug 'garbas/vim-snipmate'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'marcweber/vim-addon-mw-utils'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
 Plug 'moll/vim-node'
 Plug 'othree/yajs.vim'

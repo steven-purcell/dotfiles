@@ -88,34 +88,38 @@ alias gcb='git checkout -b'
 
 # INIT
 # Init a new git repo with branching model support
-alias gfi='git flow init'
+alias gfinit='git flow init'
 
 ## FEATURE
 # Start a new feature
-alias gffs='git flow feature start ' # <feature-name>
+alias gffstart='git flow feature start ' # <feature-name>
 # Finish up a feature
-alias gfff='git flow feature finish ' # <feature-name>
+alias gfffinish='git flow feature finish ' # <feature-name>
 # Publish a feature
-alias gffpub='git flow feature publish ' # <feature-name>
+alias gffpublish='git flow feature publish ' # <feature-name>
 # Getting a published feature
 alias gffpull='git flow feature pull origin ' # <feature-name>
 # Track a feature
-alias gfft='git flow feature track ' # <feature-name>
+alias gfftrack='git flow feature track ' # <feature-name>
 
 ## RELEASE
 # Start a release
-alias gfrs='git flow release start ' # <release-name> [<sha1-hash-to-start-release-from>]
+alias gfrstart='git flow release start ' # <release-name> [<sha1-hash-to-start-release-from>]
 # Publish a release
-alias gfrp='git flow release publish ' # <release-name>
+alias gfrpublish='git flow release publish ' # <release-name>
 # Track a release
-alias gfrt='git flow release track ' # <release-name>
+alias gfrtrack='git flow release track ' # <release-name>
 # Finish a release
-alias gfrf='git flow release finish ' # <release-name>
+alias gfrfinish='git flow release finish ' # <release-name>
 # Push tags
-alias gfpt='git push --tags'
+alias gfptags='git push --tags'
 
 # HOTFIX
 # Start a hotfix
-alias gfhs='git flow hotfix start ' # <version> [<base-name>]'
+alias gfhstart='git flow hotfix start ' # <version> [<base-name>]'
 # Finish a hotfix
-alias gfhf='git flow hotfix finish ' # <version>
+alias gfhfinish='git flow hotfix finish ' # <version>
+# Publish a hotfix
+alias gfhpush='git flow hotfix publish ' # <version>
+# Getting a published hotfix
+alias gfhpull='git flow hotfix pull origin ' # <hotfix-name>
