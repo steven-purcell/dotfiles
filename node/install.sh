@@ -13,7 +13,7 @@ then
   npm install lab -g
 fi
 
-if test ! $(instant-markdown-d)
+if test ! $(which instant-markdown-d)
 then
   npm install instant-markdown-d -g
 fi
