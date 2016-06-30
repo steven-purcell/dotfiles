@@ -84,6 +84,9 @@ let g:gist_post_private = 1
 " open when C-j
 map <C-n> :NERDTreeToggle<CR>
 
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
+
 " change arrows
 let g:NERDTreeDirArrowExpandable = '৩'
 let g:NERDTreeDirArrowCollapsible = '২'
@@ -93,7 +96,7 @@ let g:NERDTreeDirArrowCollapsible = '২'
 " Airline:
 """""""""""""""""""""""""""""""""
 " tabline enabled
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 " use powerline fonts
 let g:airline_powerline_fonts = 1
@@ -183,4 +186,4 @@ call plug#end()
 """""""""""""""""""""""""""""""""
 let base16colorspace=256
 set background=dark
-colorscheme base16-pop
+colorscheme base16-default-dark
