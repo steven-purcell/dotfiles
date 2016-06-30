@@ -2,7 +2,6 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
-
 """""""""""""""""""""""""""""""""
 " VIM:
 """""""""""""""""""""""""""""""""
@@ -19,9 +18,10 @@ set nowrap
 set encoding=utf-8
 set fileencoding=utf-8
 
-" avoid tmp files in projects
-set backupdir=~/.bak
-set directory=~/.swp
+" Turn off backups, etc.
+set nobackup
+set nowb
+set noswapfile
 
 " enable omnicomplete
 set omnifunc=syntaxcomplete#Complete
@@ -32,13 +32,47 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" remove tailing white space
-command T %s/\s\+$//
+" Always show line numbers.
+set number
 
 " use spaces for all indentation
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+" Sudo saving (w!!)
+cmap w!! w !sudo tee % >/dev/null
+
+set ignorecase " Ignore case when searching
+set smartcase " When searching try to be smart about cases
+set hlsearch " Highlight search resultsh
+set incsearch " be like search in modern browsers
+
+" Map space to / (search)
+map <space> /
+map <silent> <leader><cr> :noh<cr>
+
+" Enable mouse (if terminal has support for it)
+if has('mouse')
+  set mouse=a
+endif
+
+" Spellcheck en_CA
+nnoremap <C-w>s :setlocal spell spelllang=en_ca<CR>
+nnoremap <C-w>S :setlocal nospell<CR>
+
+" Need +virtualedit to paste in insert mode.
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+imap <S-Insert> <C-V>
+vmap <S-Insert> <C-V>
+
+"""""""""""""""""""""""""""""""""
+" GIST:
+"""""""""""""""""""""""""""""""""
+" gist-vim
+let g:gist_detect_filetype = 1
+let g:gist_post_private = 1
 
 
 """""""""""""""""""""""""""""""""
@@ -138,6 +172,8 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/winresizer.vim'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -148,4 +184,3 @@ call plug#end()
 let base16colorspace=256
 set background=dark
 colorscheme base16-pop
-

@@ -75,6 +75,7 @@ pres:
 * [npm install instant-markdown-d](https://www.npmjs.com/package/instant-markdown-d)
 * [patched powerline-fonts](https://github.com/powerline/fonts)
 * [ack](http://beyondgrep.com/install/)
+* brew install ctags-exuberant
 
 ## atom
 

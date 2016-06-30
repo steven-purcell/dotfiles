@@ -11,10 +11,11 @@ brew 'elixir'
 brew 'httpie'
 brew 'gist'
 brew 'mariadb'
+brew 'ctags-exuberant'
 brew 'macvim', args: ['HEAD', 'with-lua', 'with-luajit', 'with-override-system-vim']
 
 cask 'hipchat'
-cask 'chromium'
+cask 'google-chrome'
 cask 'spectacle'
 cask 'textual'
 cask 'parallels-desktop'
