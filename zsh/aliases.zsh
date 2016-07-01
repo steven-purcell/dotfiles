@@ -14,7 +14,6 @@ alias sync='cd ~/src/gbw/sync'
 alias tmp='cd ~/src/tmp'
 alias tool='cd ~/src/tools'
 alias .d='cd ~/.dotfiles'
-alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 
