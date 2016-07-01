@@ -1,6 +1,5 @@
 # Reload it all
 alias reload!='. ~/.zshrc'
-alias r!='. ~/.zshrc'
 
 # Code
 alias apis='cd ~/src/gbw/apis'
@@ -14,8 +13,8 @@ alias sync='cd ~/src/gbw/sync'
 alias tmp='cd ~/src/tmp'
 alias tool='cd ~/src/tools'
 alias .d='cd ~/.dotfiles'
-alias ..='cd ../..'
-alias ...='cd ../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # MacVim
 alias vim='mvim -v'

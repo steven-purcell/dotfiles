@@ -70,7 +70,7 @@ this script in `bin/`.
 
 So much vim goodness in here it hurts.
 
-pres:
+before:
 * [macvim --HEAD --with-lua --with-luajit --with-override-system-vim](https://github.com/macvim-dev/macvim)
 * [npm install instant-markdown-d](https://www.npmjs.com/package/instant-markdown-d)
 * [patched powerline-fonts](https://github.com/powerline/fonts)
@@ -78,6 +78,8 @@ pres:
 * brew install ctags-exuberant
 * [base16-shell](https://github.com/chriskempson/base16-shell)
 * [vim-plug](https://github.com/junegunn/vim-plug)
+
+after:
 * cd ~/.vim/plugged/tern_for_vim && npm install
 * set terminals font to one of the installed powerline fonts (if you plan on using vim in the term) for both Font and Non-ASCII Font
 
