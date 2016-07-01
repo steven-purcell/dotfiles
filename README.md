@@ -78,6 +78,7 @@ pres:
 * brew install ctags-exuberant
 * [base16-shell](https://github.com/chriskempson/base16-shell)
 * [vim-plug](https://github.com/junegunn/vim-plug)
+* cd ~/.vim/plugged/tern_for_vim && npm install
 * set terminals font to one of the installed powerline fonts (if you plan on using vim in the term) for both Font and Non-ASCII Font
 
 ## atom
