@@ -40,8 +40,8 @@ done
 
 unset config_files
 
-export NVM_DIR="/Users/rocky.assad/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/Users/rocky.assad/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Base16 Shell
 BASE16_SHELL="$HOME/src/oss/base16-shell/scripts/base16-default-dark.sh"

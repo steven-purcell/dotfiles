@@ -103,6 +103,10 @@ inoremap kj <esc>
 inoremap <C-h> <left>
 inoremap <C-l> <right>
 
+ " reselect visual block after indent
+vnoremap < <gv
+vnoremap > >gv
+
 """""""""""""""""""""""""""""""""
 " GIST:
 """""""""""""""""""""""""""""""""
