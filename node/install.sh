@@ -3,6 +3,7 @@ then
   curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
   lts=$(curl https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts) | .version' | head -n 1 | tail -c +2)
   echo "installing node version (lts): $lts"
+  source ~/.nvm/nvm.sh
   nvm install $lts
   nvm alias default $lts
 fi
