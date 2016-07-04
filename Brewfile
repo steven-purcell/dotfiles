@@ -14,6 +14,7 @@ brew 'jq'
 brew 'macvim', args: ['HEAD', 'with-lua', 'with-luajit', 'with-override-system-vim']
 brew 'mariadb'
 brew 'node'
+brew 'openssl'
 brew 'zsh'
 
 cask 'alfred'

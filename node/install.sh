@@ -8,6 +8,11 @@ then
   nvm alias default $lts
 fi
 
+if test $(which npm)
+then
+  npm update npm -g
+fi
+
 if test ! $(which nodemon)
 then
   npm install nodemon -g
