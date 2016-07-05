@@ -1,4 +1,4 @@
-if [ ! -e ~/.nvm/nvm.sh ];
+if test ! -e ~/.nvm/nvm.sh
 then
   curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
   lts=$(curl https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts) | .version' | head -n 1 | tail -c +2)
@@ -11,6 +11,11 @@ fi
 if test $(which npm)
 then
   npm update npm -g
+fi
+
+if test ! $(which bunyan)
+then
+  npm install bunyan -g
 fi
 
 if test ! $(which nodemon)
