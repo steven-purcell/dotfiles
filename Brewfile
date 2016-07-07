@@ -33,6 +33,8 @@ cask 'spectacle'
 cask 'spotify'
 cask 'textual'
 cask 'java'
+cask 'kaleidoscope'
+cask 'tower'
 
 mas 'ipulse', id: 1028916583
 mas 'microsoft-remote-desktop', id: 715768417
