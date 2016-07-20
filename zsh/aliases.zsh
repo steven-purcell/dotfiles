@@ -1,6 +1,13 @@
 # Reload it all
 alias reload!='. ~/.zshrc'
 
+# Mysql
+alias startdb='mysql.server start'
+alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
+
+# Redis
+alias startredis='redis-server --protected-mode no'
+
 # Code
 alias apis='cd ~/src/gbw/apis'
 alias code='cd ~/src'
@@ -15,6 +22,9 @@ alias tool='cd ~/src/tools'
 alias .d='cd ~/.dotfiles'
 alias ..='cd ..'
 alias ...='cd ../..'
+
+alias h='history'
+alias js'node'
 
 # MacVim
 alias vim='mvim -v'

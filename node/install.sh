@@ -37,3 +37,14 @@ if test ! $(which instant-markdown-d)
 then
   npm install instant-markdown-d -g
 fi
+
+if test ! $(which redis-commander)
+then
+  npm install redis-commander -g
+fi
+
+if test ! $(which gulp)
+then
+  npm install gulp -g
+fi
+

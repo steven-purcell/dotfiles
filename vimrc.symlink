@@ -151,7 +151,7 @@ let g:NERDTreeDirArrowCollapsible = '২'
 " Airline:
 """""""""""""""""""""""""""""""""
 " tabline enabled
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 " use powerline fonts
 let g:airline_powerline_fonts = 1
