@@ -29,6 +29,13 @@ set nowb
 " enable omnicomplete
 set omnifunc=syntaxcomplete#Complete
 
+" fix shitty mouse and nerdtree focus issue: thanks old Brad
+if has("mouse_sgr")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+end
+
 " better windows navigating
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
