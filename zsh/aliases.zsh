@@ -10,7 +10,6 @@ alias startredis='redis-server --protected-mode no'
 
 # Code
 alias apis='cd ~/src/gbw/apis'
-alias code='cd ~/src'
 alias data='cd ~/src/gbw/data'
 alias oss='cd ~/src/oss'
 alias s='cd ~/src'
