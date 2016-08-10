@@ -31,19 +31,3 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
-[user]
-	email = rocky.assad@premisehealth.com
-[jira]
-[jira]
-[init]
-[init]
-[init]
-[init]
-[init]
-[init]
-[jira]
-	url = https://premise.atlassian.net
-[init]
-	templateDir = /Users/rocky.assad/.git_templates
-[github]
-	user = fourq
