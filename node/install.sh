@@ -48,3 +48,8 @@ then
   npm install gulp -g
 fi
 
+if test ! $(which pm2)
+then
+  npm install pm2 -g
+fi
+
