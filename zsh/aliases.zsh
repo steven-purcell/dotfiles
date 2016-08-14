@@ -3,27 +3,29 @@ alias reload!='. ~/.zshrc'
 
 # Mysql
 alias startdb='mysql.server start'
+alias stopdb='mysql.server stop'
+alias restartdb='mysql.server restart'
 alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
 
 # Redis
 alias startredis='redis-server --protected-mode no'
+alias stopredis='redis-server --protected-mode no'
 
 # Code
-alias apis='cd ~/src/gbw/apis'
-alias data='cd ~/src/gbw/data'
-alias oss='cd ~/src/oss'
-alias s='cd ~/src'
-alias serv='cd ~/src/gbw/serv'
-alias src='cd ~/src'
-alias sync='cd ~/src/gbw/sync'
-alias tmp='cd ~/src/tmp'
-alias tool='cd ~/src/tools'
-alias .d='cd ~/.dotfiles'
-alias ..='cd ..'
 alias ...='cd ../..'
-
+alias ..='cd ..'
+alias .d='cd ~/.dotfiles'
+alias apis='cd ~/code/apis'
+alias c='cd ~/code'
+alias data='cd ~/code/data'
 alias h='history'
 alias js'node'
+alias oss='cd ~/code/oss'
+alias serv='cd ~/code/serv'
+alias src='cd ~/code'
+alias sync='cd ~/code/sync'
+alias tmp='cd ~/code/tmp'
+alias tool='cd ~/code/tools'
 
 # MacVim
 alias vim='mvim -v'
@@ -47,12 +49,12 @@ alias ls='ls -Gh'
 alias lsg='ll | grep'
 
 # editing
-alias de='mvim -v ~/.dotfiles'
-alias ze='mvim -v ~/.zshrc'
-alias ve='mvim -v ~/.vimrc'
 alias ae='mvim -v ~/.dotfiles/zsh/aliases.zsh'
-alias pe='mvim -v ~/.dotfiles/zsh/prompt.zsh'
+alias de='mvim -v ~/.dotfiles'
 alias ge='mvim -v ~/.dotfiles/git/aliases.zsh'
+alias pe='mvim -v ~/.dotfiles/zsh/prompt.zsh'
+alias ve='mvim -v ~/.vimrc'
+alias ze='mvim -v ~/.zshrc'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'

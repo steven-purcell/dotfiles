@@ -62,8 +62,3 @@ if test ! $(which coffee-script)
 then
   npm install coffee-script -g
 fi
-
-if test ! $(which httpie)
-then
-  npm install httpie -g
-fi
