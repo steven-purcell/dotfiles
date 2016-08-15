@@ -9,6 +9,7 @@ brew 'elixir'
 brew 'erlang'
 brew 'gist'
 brew 'git-flow-avh'
+brew 'go'
 brew 'httpie'
 brew 'jq'
 brew 'macvim', args: ['HEAD', 'with-lua', 'with-luajit', 'with-override-system-vim']
