@@ -4,6 +4,7 @@ tap 'caskroom/cask'
 tap 'homebrew/bundle'
 
 brew 'ack'
+brew 'coreutils'
 brew 'ctags-exuberant'
 brew 'elixir'
 brew 'erlang'

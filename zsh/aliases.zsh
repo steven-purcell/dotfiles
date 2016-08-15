@@ -11,6 +11,9 @@ alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
 alias startredis='redis-server --protected-mode no'
 alias stopredis='redis-server --protected-mode no'
 
+# readlink OSX
+alias readlink='greadlink'
+
 # Code
 alias ...='cd ../..'
 alias ..='cd ..'
