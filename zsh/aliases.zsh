@@ -7,10 +7,6 @@ alias stopdb='mysql.server stop'
 alias restartdb='mysql.server restart'
 alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
 
-# Redis
-alias startredis='redis-server --protected-mode no'
-alias stopredis='redis-server --protected-mode no'
-
 # readlink OSX
 alias readlink='greadlink'
 
