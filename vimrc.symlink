@@ -32,6 +32,10 @@ let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
 
+" Resize windows
+nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>= :vertical resize +5<CR>
+
 " enable omnicomplete
 set omnifunc=syntaxcomplete#Complete
 
