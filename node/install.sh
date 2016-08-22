@@ -62,3 +62,8 @@ if test ! $(which coffee-script)
 then
   npm install coffee-script -g
 fi
+
+if test ! $(which node-inspector)
+then
+  npm install node-inspector -g
+fi
