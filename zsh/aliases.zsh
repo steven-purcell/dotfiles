@@ -10,6 +10,9 @@ alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
 # readlink OSX
 alias readlink='greadlink'
 
+#irssi
+alias irssi='screen irssi'
+
 # Code
 alias ...='cd ../..'
 alias ..='cd ..'
