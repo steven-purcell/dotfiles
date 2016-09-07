@@ -31,6 +31,18 @@ nmap <silent> <C-l> <Plug>(jsdoc)
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
+let g:javascript_plugin_jsdoc = 1
+
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_this           = "@"
+let g:javascript_conceal_return         = "⇚"
+let g:javascript_conceal_undefined      = "¿"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_prototype      = "¶"
+let g:javascript_conceal_static         = "•"
+let g:javascript_conceal_super          = "Ω"
+let g:javascript_conceal_arrow_function = "⇒"
 
 " Resize windows
 nnoremap <Leader>- :vertical resize -5<CR>
@@ -125,6 +137,24 @@ vnoremap < <gv
 vnoremap > >gv
 
 """""""""""""""""""""""""""""""""
+" VIM_MOCHA:
+"
+"""""""""""""""""""""""""""""""""
+let g:mocha_js_command = "!lab {spec}"
+"let g:mocha_coffee_command = "!mocha -b --compilers coffee:coffee-script{spec}"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+
+"""""""""""""""""""""""""""""""""
+" HOUND:
+"""""""""""""""""""""""""""""""""
+let g:hound_base_url = "hound.goandbewell.com"
+let g:hound_port = "80"
+
+"""""""""""""""""""""""""""""""""
 " GIST:
 """""""""""""""""""""""""""""""""
 " gist-vim
@@ -208,11 +238,14 @@ highlight link SyntasticStyleWarningSign SignColumn
 let g:YUNOcommit_after = 10
 
 """""""""""""""""""""""""""""""""
-" Plug:
+" PLUG:
 """""""""""""""""""""""""""""""""
 " Ternjs: run `npm install` the first time
 " .dotfiles/vim.symlink/plugged/tern_for_vim
+
+Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
+Plug 'benmills/vimux' 
 Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -222,7 +255,6 @@ Plug 'edsono/vim-matchit'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'esneider/YUNOcommit.vim'
-Plug 'garbas/vim-snipmate'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'jasoncodes/ctrlp-modified.vim'
@@ -235,10 +267,12 @@ Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
 Plug 'moll/vim-node'
 Plug 'othree/yajs.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'sgur/ctrlp-extensions.vim'
+Plug 'sirver/ultisnips'
 Plug 'sjl/gundo.vim'
 Plug 'suan/vim-instant-markdown'
 Plug 'takac/vim-spotifysearch'
@@ -247,11 +281,14 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'urthbound/hound.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/winresizer.vim'
+"Plug 'geekjuice/vim-mocha'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
+
 
 " Add plugins to &runtimepath
 call plug#end()

@@ -80,6 +80,7 @@ before:
 ** uses readlink --f option which isn't available in OSX, brew install coreutils, alias readlink='greadlink' for work around. If already using base16-shell, update to latest version and read new README.
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * set terminals font to one of the installed powerline fonts (if you plan on using vim in the term) for both Font and Non-ASCII Font
+* `pip install spotipy` or `easy_install spotipy` (for spotify plugin \o/)
 
 after:
 * open vim -> run "PlugInstall" -> quit & re-open vim

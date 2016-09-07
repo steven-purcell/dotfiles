@@ -67,3 +67,8 @@ if test ! $(which node-inspector)
 then
   npm install node-inspector -g
 fi
+
+if test ! $(which npm-check)
+then
+  npm install npm-check -g
+fi
