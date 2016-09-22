@@ -137,18 +137,6 @@ vnoremap < <gv
 vnoremap > >gv
 
 """""""""""""""""""""""""""""""""
-" VIM_MOCHA:
-"
-"""""""""""""""""""""""""""""""""
-let g:mocha_js_command = "!lab {spec}"
-"let g:mocha_coffee_command = "!mocha -b --compilers coffee:coffee-script{spec}"
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-
-"""""""""""""""""""""""""""""""""
 " HOUND:
 """""""""""""""""""""""""""""""""
 let g:hound_base_url = "hound.goandbewell.com"
@@ -245,7 +233,7 @@ let g:YUNOcommit_after = 10
 
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
-Plug 'benmills/vimux' 
+"Plug 'benmills/vimux' 
 Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'

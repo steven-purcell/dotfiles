@@ -1,5 +1,6 @@
 cask_args appdir: '/Applications'
 
+tap 'homebrew/versions'
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
 
@@ -7,6 +8,7 @@ brew 'ack'
 brew 'coreutils'
 brew 'ctags-exuberant'
 brew 'gist'
+brew 'git'
 brew 'git-flow-avh'
 brew 'go'
 brew 'httpie'

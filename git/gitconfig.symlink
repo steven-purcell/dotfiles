@@ -33,3 +33,7 @@
         default = simple
 [github]
 	user = fourq
+[jira]
+	url = https://premise.atlassian.net
+[init]
+	templateDir = /Users/rocky.assad/.git_templates
