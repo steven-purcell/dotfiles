@@ -13,8 +13,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 " no cowbells
-set noerrorbells
-
+set noerrorbells 
 " don't make it look like there are line breaks where there aren't:
 set nowrap
 
@@ -231,9 +230,10 @@ let g:YUNOcommit_after = 10
 " Ternjs: run `npm install` the first time
 " .dotfiles/vim.symlink/plugged/tern_for_vim
 
+"Plug 'benmills/vimux' 
+"Plug 'geekjuice/vim-mocha'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
-"Plug 'benmills/vimux' 
 Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -248,6 +248,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'leafgarland/typescript-vim'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'mattn/gist-vim'
@@ -273,7 +274,6 @@ Plug 'urthbound/hound.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/winresizer.vim'
-"Plug 'geekjuice/vim-mocha'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 

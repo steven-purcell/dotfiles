@@ -28,6 +28,7 @@ alias src='cd ~/code'
 alias sync='cd ~/code/sync'
 alias tmp='cd ~/code/tmp'
 alias tool='cd ~/code/tools'
+alias rf='rm -rf'
 
 # MacVim
 alias vim='mvim -v'
