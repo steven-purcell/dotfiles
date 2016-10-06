@@ -71,16 +71,15 @@ this script in `bin/`.
 So much vim goodness in here it hurts.
 
 before:
-* [macvim --HEAD --with-lua --with-luajit --with-override-system-vim](https://github.com/macvim-dev/macvim)
 * [npm install instant-markdown-d](https://www.npmjs.com/package/instant-markdown-d)
 * [patched powerline-fonts](https://github.com/powerline/fonts)
-* [ack](http://beyondgrep.com/install/)
 * brew install ctags-exuberant
 * [base16-shell](https://github.com/chriskempson/base16-shell)
 ** uses readlink --f option which isn't available in OSX, brew install coreutils, alias readlink='greadlink' for work around. If already using base16-shell, update to latest version and read new README.
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * set terminals font to one of the installed powerline fonts (if you plan on using vim in the term) for both Font and Non-ASCII Font
 * `pip install spotipy` or `easy_install spotipy` (for spotify plugin \o/)
+* remove iterm2's border: Open Preferences, click the Profiles tab, select your profile, click Window and select No Title Bar from the Style dropdown menu
 
 after:
 * open vim -> run "PlugInstall" -> quit & re-open vim

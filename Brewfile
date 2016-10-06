@@ -15,7 +15,7 @@ brew 'httpie'
 brew 'irssi'
 brew 'jq'
 brew 'macvim', args: ['HEAD', 'with-lua', 'with-luajit', 'with-override-system-vim']
-brew 'mariadb'
+brew 'mysql'
 brew 'node'
 brew 'openssl'
 brew 'rabbitmq'
@@ -25,7 +25,6 @@ brew 'zsh'
 
 cask 'bartender'
 cask 'caffeine'
-cask 'datagrip'
 cask 'gitter'
 cask 'google-chrome'
 cask 'hipchat'
@@ -36,6 +35,5 @@ cask 'parallels-desktop'
 cask 'postman'
 cask 'spectacle'
 cask 'spotify'
-cask 'popkey'
 
 mas 'microsoft-remote-desktop', id: 715768417
