@@ -136,12 +136,6 @@ vnoremap < <gv
 vnoremap > >gv
 
 """""""""""""""""""""""""""""""""
-" HOUND:
-"""""""""""""""""""""""""""""""""
-let g:hound_base_url = "hound.goandbewell.com"
-let g:hound_port = "80"
-
-"""""""""""""""""""""""""""""""""
 " GIST:
 """""""""""""""""""""""""""""""""
 " gist-vim
@@ -270,7 +264,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'urthbound/hound.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/winresizer.vim'
