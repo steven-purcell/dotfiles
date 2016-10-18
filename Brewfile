@@ -5,13 +5,13 @@ tap 'caskroom/cask'
 tap 'homebrew/bundle'
 
 brew 'ack'
+brew 'bitlbee'
 brew 'coreutils'
 brew 'ctags-exuberant'
 brew 'gist'
 brew 'git'
 brew 'git-flow-avh'
 brew 'go'
-brew 'httpie'
 brew 'irssi'
 brew 'jq'
 brew 'macvim', args: ['HEAD', 'with-lua', 'with-luajit', 'with-override-system-vim']
@@ -35,5 +35,6 @@ cask 'parallels-desktop'
 cask 'postman'
 cask 'spectacle'
 cask 'spotify'
+cask 'carbon-copy-cloner'
 
 mas 'microsoft-remote-desktop', id: 715768417

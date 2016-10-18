@@ -10,3 +10,5 @@ atom.symlink/storage
 atom.symlink/themes
 
 git/gitconfig.local.symlink
+
+irssi.symlink/sasl.auth
