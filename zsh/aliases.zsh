@@ -10,8 +10,13 @@ alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
 # readlink OSX
 alias readlink='greadlink'
 
-#irssi
+# irssi
 alias irssi='screen irssi'
+
+# bitlbee
+alias startbitlbee='brew services start bitlbee'
+alias stopbitlbee='brew services stop bitlbee'
+alias restartbitlbee='brew services restart bitlbee'
 
 # Code
 alias ...='cd ../..'
