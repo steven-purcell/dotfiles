@@ -13,6 +13,14 @@ servers = (
     port = "<znc-port>";
     autoconnect = "Yes";
   },
+  {
+    address = "localhost";
+    chatnet = "BitlBee";
+    port = "6667";
+    use_ssl = "No";
+    ssl_verify = "No";
+    autoconnect = "Yes";
+  },
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
@@ -53,6 +61,10 @@ chatnets = {
     max_msgs = "5";
     max_whois = "4";
     max_query_chans = "5";
+  };
+  BitlBee = {
+    type = "IRC";
+    autosendcmd = "/msg &bitlbee identify <bitlbee-password>";
   };
   IRCnet = {
     type = "IRC";
