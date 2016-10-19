@@ -13,4 +13,9 @@ atom.symlink/recovery
 
 git/gitconfig.local.symlink
 
+irssi.smylink/*.autosave
+irssi.smylink/config
+irssi.smylink/logs
+irssi.smylink/saved_colors
+irssi.symlink/config
 irssi.symlink/sasl.auth

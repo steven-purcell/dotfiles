@@ -21,6 +21,7 @@ brew 'openssl'
 brew 'rabbitmq'
 brew 'redis'
 brew 'terminal-notifier'
+brew 'wget'
 brew 'yarn'
 brew 'zsh'
 
