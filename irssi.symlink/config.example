@@ -14,6 +14,14 @@ servers = (
     autoconnect = "Yes";
   },
   {
+    address = "irc.freenode.net";
+    chatnet = "LocalFreenode";
+    password = "<irc-password>";
+    port = "6667";
+    autoconnect = "No";
+    nick = "<irc-nick>";
+  },
+  {
     address = "localhost";
     chatnet = "BitlBee";
     port = "6667";
@@ -48,6 +56,13 @@ servers = (
 );
 
 chatnets = {
+  LocalFreenode = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "5";
+    max_whois = "4";
+    max_query_chans = "5";
+  };
   ZNCFreenode = {
     type = "IRC";
     max_kicks = "4";
