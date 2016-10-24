@@ -19,3 +19,5 @@ irssi.symlink/logs
 irssi.symlink/saved_colors
 irssi.symlink/config
 irssi.symlink/sasl.auth
+
+dump.rdb
