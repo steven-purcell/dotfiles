@@ -40,10 +40,10 @@ cask 'kaleidoscope'
 cask 'microsoft-lync'
 cask 'parallels-desktop'
 cask 'postman'
+cask 'slack'
 cask 'spectacle'
 cask 'spotify'
 cask 'steam'
 cask 'transmission'
-cask 'vlc'
 
 mas 'microsoft-remote-desktop', id: 715768417
