@@ -16,10 +16,10 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "LocalFreenode";
-    password = "<irc-password>";
-    port = "6667";
+    port = "6697";
+    use_ssl = "Yes";
     autoconnect = "No";
-    nick = "<irc-nick>";
+    nick = "<irc-nick (can be grouped nick)>";
   },
   {
     address = "localhost";
@@ -62,6 +62,9 @@ chatnets = {
     max_msgs = "5";
     max_whois = "4";
     max_query_chans = "5";
+    sasl_mechanism = "PLAIN";
+    sasl_username = "<irc-nick>";
+    sasl_password = "<irc-password>";
   };
   ZNCFreenode = {
     type = "IRC";
