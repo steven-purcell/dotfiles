@@ -4,17 +4,28 @@ then
 fi
 
 lts=v$(curl https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts) | .version' | head -n 1 | tail -c +2)
-current=$(node --version)
+cts=$(node --version)
 
-if [[ $lts != $current ]]
+if [[ $lts != $cts ]]
 then
-  echo "updating node LTS $current -> $lts"
+  echo "updating node LTS $cts -> $lts"
   source ~/.nvm/nvm.sh
 
   nvm install $lts
   nvm alias default $lts
 else
   echo "node LTS is current"
+fi
+
+lnv=$(npm info npm | grep -o -m 1 "version: '.*'" | sed "s/version: '//g" | sed "s/'//g")
+cnv=$(npm -v)
+
+if [[ $lnv != $cnv ]]
+then
+  echo "updating npm $cnv -> $lnv"
+  npm install npm -g
+else
+  echo "npm is current"
 fi
 
 if test $(which npm)
