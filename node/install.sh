@@ -17,6 +17,11 @@ else
   echo "node LTS is current"
 fi
 
+if test $(which npm)
+then
+  npm update npm -g
+fi
+
 lnv=$(npm info npm | grep -o -m 1 "version: '.*'" | sed "s/version: '//g" | sed "s/'//g")
 cnv=$(npm -v)
 
@@ -26,11 +31,6 @@ then
   npm install npm -g
 else
   echo "npm is current"
-fi
-
-if test $(which npm)
-then
-  npm update npm -g
 fi
 
 if test ! $(which bunyan)
