@@ -18,3 +18,4 @@ irssi.symlink/config
 irssi.symlink/logs
 irssi.symlink/sasl.auth
 irssi.symlink/saved_colors
+vim.symlink/plugged
