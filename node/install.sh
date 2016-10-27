@@ -1,11 +1,20 @@
 if test ! -e ~/.nvm/nvm.sh
 then
   curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-  lts=$(curl https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts) | .version' | head -n 1 | tail -c +2)
+fi
+
+lts=v$(curl https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts) | .version' | head -n 1 | tail -c +2)
+current=$(node --version)
+
+if [[ $lts != $current ]]
+then
+  echo "updating node LTS $current -> $lts"
   source ~/.nvm/nvm.sh
 
   nvm install $lts
   nvm alias default $lts
+else
+  "node LTS is current"
 fi
 
 if test $(which npm)
