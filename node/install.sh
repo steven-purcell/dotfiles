@@ -14,7 +14,7 @@ then
   nvm install $lts
   nvm alias default $lts
 else
-  "node LTS is current"
+  echo "node LTS is current"
 fi
 
 if test $(which npm)
