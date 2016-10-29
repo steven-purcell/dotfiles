@@ -18,4 +18,5 @@ irssi.symlink/config
 irssi.symlink/logs
 irssi.symlink/sasl.auth
 irssi.symlink/saved_colors
+rethinkdb_data
 vim.symlink/plugged
