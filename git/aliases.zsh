@@ -48,6 +48,8 @@ alias gfa='git fetch --all'
 alias gfap='git fetch --all --prune'
 alias gfch='git fetch'
 alias gd='git diff'
+alias gsu='git submodule update' # gsu dir-from-gitmodules
+
 # Staged and cached are the same thing
 alias gdc='git diff --cached -w'
 alias gds='git diff --staged -w'
