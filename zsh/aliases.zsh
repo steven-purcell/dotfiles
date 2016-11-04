@@ -1,6 +1,8 @@
 # Reload it all
 alias reload!='. ~/.zshrc'
 
+alias name='scutil --get ComputerName' # get computer name
+
 # Mysql
 alias startdb='mysql.server start'
 alias stopdb='mysql.server stop'
