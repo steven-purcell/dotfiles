@@ -79,6 +79,11 @@ set smartcase " When searching try to be smart about cases
 set hlsearch " Highlight search resultsh
 set incsearch " be like search in modern browsers
 
+" Sometimes it is helpful if your working directory is 
+" always the same as the file you are editing.
+" http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+set autochdir
+
 " Map space to / (search)
 map <space> /
 map <silent> <leader><cr> :noh<cr>

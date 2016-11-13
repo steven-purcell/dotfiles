@@ -4,10 +4,10 @@ alias reload!='. ~/.zshrc'
 alias name='scutil --get ComputerName' # get computer name
 
 # Mysql
+alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
+alias restartdb='mysql.server restart'
 alias startdb='mysql.server start'
 alias stopdb='mysql.server stop'
-alias restartdb='mysql.server restart'
-alias importdb='echo "mysql -u <username> -p <databasename> < <filename.sql>"'
 
 # readlink OSX
 alias readlink='greadlink'
@@ -17,11 +17,12 @@ alias irssi='screen irssi'
 
 # bitlbee
 alias configbitlbee='vim usr/local/var/bitlbee/lib/'
-alias startbitlbee='brew services start bitlbee'
-alias stopbitlbee='brew services stop bitlbee'
 alias restartbitlbee='brew services restart bitlbee'
+alias startbitlbee='brew services start bitlbee'
+alias startrabbitmq='rabbitmq-server'
+alias stopbitlbee='brew services stop bitlbee'
 
-# Code
+# code
 alias ...='cd ../..'
 alias ..='cd ..'
 alias .d='cd ~/.dotfiles'
@@ -30,13 +31,14 @@ alias c='cd ~/code'
 alias data='cd ~/code/data'
 alias h='history'
 alias js='node'
+alias makesrc='mkdir -p ~/code/apis ~/code/data ~/code/oss ~/code/services ~/code/syncs ~/code/tmp ~/code/tools'
 alias oss='cd ~/code/oss'
-alias serv='cd ~/code/serv'
+alias rf='rm -rf'
+alias serv='cd ~/code/services'
 alias src='cd ~/code'
-alias sync='cd ~/code/sync'
+alias sync='cd ~/code/syncs'
 alias tmp='cd ~/code/tmp'
 alias tool='cd ~/code/tools'
-alias rf='rm -rf'
 
 # MacVim
 alias vim='mvim -v'

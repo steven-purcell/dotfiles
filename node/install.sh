@@ -87,3 +87,8 @@ if test ! $(which npm-check)
 then
   npm install npm-check -g
 fi
+
+if test $(which reql-cli)
+then
+  npm update reql-cli -g
+fi
