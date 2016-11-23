@@ -9,6 +9,7 @@ atom.symlink/packages
 atom.symlink/recovery
 atom.symlink/storage
 atom.symlink/themes
+config.symlink/wireshark
 configstore
 dump.rdb
 git/gitconfig.local.symlink
