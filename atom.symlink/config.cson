@@ -1,0 +1,10 @@
+"*":
+  core:
+    telemetryConsent: "limited"
+  editor:
+    fontSize: 12
+  "exception-reporting":
+    userId: "f8eb51e1-f929-5c24-b404-8b1198d4c95a"
+  "split-diff": {}
+  welcome:
+    showOnStartup: false

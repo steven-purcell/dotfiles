@@ -46,16 +46,27 @@ export NVM_DIR="$HOME/.nvm"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-PATH="/Users/rocky.assad/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/rocky.assad/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/rocky.assad/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/rocky.assad/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/rocky.assad/perl5"; export PERL_MM_OPT;
+# Create Socks5 forward.
+function socks {
+  ssh -N -D 127.0.0.1:1080 $1 &
+}
+
+function uploadkeys {
+  SSH_SERVER=$1
+  SSH_PUBLICKEY_PATH=~/.ssh/id_rsa.pub
+  SSH_PUBLICKEY=`basename $SSH_PUBLICKEY_PATH`
+  echo "Adding to authorized keys"
+
+  ssh-keygen -f ~/.ssh/known_hosts -R $10
+  echo "Uploading $SSH_PUBLICKEY_PATH"
+  scp $SSH_PUBLICKEY_PATH $SSH_SERVER:~/
+
+  echo "Adding to authorized_keys"
+  ssh $SSH_SERVER "mkdir ~/.ssh; chmod 700 ~/.ssh; touch ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys;cat ~/$SSH_PUBLICKEY >> ~/.ssh/authorized_keys; rm $SSH_PUBLICKEY; cat ~/.ssh/authorized_keys"
+}
 
 # Base16 Shell
 #BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh"
 #[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-export PATH=$PATH:$M2_HOME/bin

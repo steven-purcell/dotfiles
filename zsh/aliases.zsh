@@ -9,18 +9,10 @@ alias restartdb='mysql.server restart'
 alias startdb='mysql.server start'
 alias stopdb='mysql.server stop'
 
+alias ws='cd $HOME/workspace'
+
 # readlink OSX
 alias readlink='greadlink'
-
-# irssi
-alias irssi='screen irssi'
-
-# bitlbee
-alias configbitlbee='vim usr/local/var/bitlbee/lib/'
-alias restartbitlbee='brew services restart bitlbee'
-alias startbitlbee='brew services start bitlbee'
-alias startrabbitmq='rabbitmq-server'
-alias stopbitlbee='brew services stop bitlbee'
 
 # code
 alias ...='cd ../..'
@@ -68,6 +60,9 @@ alias ge='mvim -v ~/.dotfiles/git/aliases.zsh'
 alias pe='mvim -v ~/.dotfiles/zsh/prompt.zsh'
 alias ve='mvim -v ~/.vimrc'
 alias ze='mvim -v ~/.zshrc'
+alias .v='vim ~/.vimrc'
+alias .z='vim ~/.zshrc'
+alias .h='vim /etc/hosts'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
