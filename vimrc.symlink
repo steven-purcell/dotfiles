@@ -179,6 +179,8 @@ let g:loaded_netrwPlugin = 1
 let g:NERDTreeDirArrowExpandable = '৩'
 let g:NERDTreeDirArrowCollapsible = '২'
 
+" close nerdtree when it is the only thing left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """""""""""""""""""""""""""""""""
 " Airline:
@@ -257,7 +259,7 @@ Plug 'moll/vim-node'
 Plug 'othree/yajs.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'sgur/ctrlp-extensions.vim'
 Plug 'sirver/ultisnips'

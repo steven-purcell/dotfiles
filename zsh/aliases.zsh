@@ -10,6 +10,10 @@ alias startdb='mysql.server start'
 alias stopdb='mysql.server stop'
 
 alias ws='cd $HOME/workspace'
+alias wsp='cd $HOME/workspace/projects'
+alias winws='cd /Volumes/C/work/projects'
+#keycloak
+alias startkeycloak='docker run -p8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin jboss/keycloak'
 
 # readlink OSX
 alias readlink='greadlink'
