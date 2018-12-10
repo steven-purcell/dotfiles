@@ -87,6 +87,10 @@ after:
 * open vim -> run "PlugInstall" -> quit & re-open vim
 * cd ~/.vim/plugged/tern_for_vim && npm install
 
+to refresh after a breaking os update:
+* open vim -> run "PlugClean" -> run PlugInstall -> quit & re-open vim
+* cd ~/.vim/plugged/tern_for_vim && npm install
+
 ## atom
 
 I tried out Atom for about 3 weeks... puked a lot.
