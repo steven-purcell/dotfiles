@@ -89,7 +89,27 @@ directory_name() {
   echo "%{$fg_bold[blue]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(node_version)$(rb_prompt)$(directory_name)$(package_version) $(git_dirty)$(need_push)\n› '
+is_python_virtual() {
+  if ! [[ -z $(echo $VIRTUAL_ENV) ]]
+  then
+    echo "%{$fg_bold[cyan]%}(venv)%{$reset_color%}"
+  else
+    echo "%{$fg_bold[cyan]%}(global)%{$reset_color%}"
+  fi
+}
+
+python_env() {
+  if ! [[ -z $(python3 -V) ]]
+  then
+    echo "%{$fg_bold[green]%}python3/%{$reset_color%}%{$fg_bold[yellow]%}$(python3 -V)/%{$reset_color%}$(is_python_virtual) "
+  else
+    echo "missing python"
+  fi
+}
+
+export PROMPT=$'\n$(directory_name) $(python_env)$(package_version) $(git_dirty)$(need_push)\n› '
+#export PROMPT=$'\n$(node_version)$(rb_prompt)$(directory_name)$(package_version) $(git_dirty)$(need_push)\n› '
+
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }

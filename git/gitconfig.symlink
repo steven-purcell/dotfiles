@@ -17,6 +17,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+	    autocrlf = input
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -37,3 +38,5 @@
 	url = https://premise.atlassian.net
 [init]
 	templateDir = /Users/chris.pruitt/.git_templates
+[user]
+	name = chris-pruitt
