@@ -27,6 +27,8 @@ brew 'wget'
 brew 'yarn'
 brew 'zsh'
 brew 'watch'
+brew 'awscli'
+brew 'bash'
 
 cask 'atom'
 cask 'caffeine'
