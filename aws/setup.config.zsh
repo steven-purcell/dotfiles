@@ -27,8 +27,17 @@ _awsworkspace() {
 }
 
 function awsworkspace() {
-  export WORKSPACE=$@
-  for i in $@; do source ${AWS_WORKSPACE_DIR}/$i.sh; done
+  if [[ ! -z "$@" ]];
+  then
+      for i in $@; do source ${AWS_WORKSPACE_DIR}/$i.sh; done
+  else
+    if [[ ! -z "$AWS_PROFILE" ]];
+    then
+        echo current workspace: $AWS_PROFILE
+    else
+        echo current workspace: default
+    fi
+  fi
 }
 
 complete -F _awsworkspace awsworkspace
