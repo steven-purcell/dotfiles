@@ -107,7 +107,14 @@ python_env() {
   fi
 }
 
-export PROMPT=$'\n$(directory_name) $(python_env)$(package_version) $(git_dirty)$(need_push)\n› '
+aws_workspace() {
+  if [[ ! -z "$AWS_PROFILE" ]]
+  then
+    echo "%{$fg_bold[cyan]%}aws_ws/%{$reset_color%}%{$fg_bold[yellow]%}$AWS_PROFILE%{$reset_color%} "
+  fi
+}
+
+export PROMPT=$'\n$(directory_name) $(python_env)$(package_version) $(aws_workspace) $(git_dirty)$(need_push)\n› '
 #export PROMPT=$'\n$(node_version)$(rb_prompt)$(directory_name)$(package_version) $(git_dirty)$(need_push)\n› '
 
 set_prompt () {
