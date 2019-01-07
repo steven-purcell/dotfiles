@@ -5,7 +5,7 @@ function awsgetip() {
   local TASK_LIST=$(aws ecs list-tasks --cluster ${CLUSTER} --desired-status RUNNING --service-name ${TASK_NAME})
   local TASK_ARN=$(echo ${TASK_LIST} | jq -r '.taskArns[0]')
 
-  if [[ -z "$TASK_ARN" ]]
+  if [[ -z "$TASK_ARN" ]] || [[ "$TASK_ARN" = 'null' ]]
   then
     echo "No running task found for ${TASK_NAME} in ${CLUSTER}"
     return
@@ -19,12 +19,26 @@ function awsgetip() {
     --tasks ${TASK_ARN} \
     | jq -r '.tasks[0].containerInstanceArn')
 
+  if [[ -z "$CONTAINER_INSTANCE_ARN" ]]
+  then
+    echo "No container instance found for task: ${TASK_ARN}"
+    return
+  fi
+
   local EC2_INSTANCE_ID=$(aws ecs describe-container-instances \
     --cluster ${CLUSTER} \
     --container-instances ${CONTAINER_INSTANCE_ARN} \
     | jq -r '.containerInstances[0].ec2InstanceId')
 
+  if [[ -z "$EC2_INSTANCE_ID" ]]
+  then
+    echo "No ec2 instance found for container: ${CONTAINER_INSTANCE_ARN}"
+    return
+  fi
+
   echo Tasks Running: ${NUMBER_OF_TASKS}
+  echo Container Instance ARN: ${CONTAINER_INSTANCE_ARN}
+  echo ec2 Instance ID: ${EC2_INSTANCE_ID}
   echo ec2 Instance IP: $(aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} | jq -r '.Reservations[0].Instances[0].PrivateIpAddress')
 }
 
