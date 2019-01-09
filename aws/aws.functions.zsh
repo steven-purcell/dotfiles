@@ -12,6 +12,10 @@ function aws-getip() {
   fi
 
   local NUMBER_OF_TASKS=$(echo ${TASK_LIST} | jq length)
+  if (( $NUMBER_OF_TASKS > 1 ))
+  then
+    echo Found: ${NUMBER_OF_TASKS} tasks running. Will choose first IP in list.
+  fi
 
 
   local CONTAINER_INSTANCE_ARN=$(aws ecs describe-tasks \
@@ -42,7 +46,6 @@ function aws-getip() {
   echo Container Instance ARN: ${CONTAINER_INSTANCE_ARN}
   echo ec2 Instance ID: ${EC2_INSTANCE_ID}
   echo ec2 Instance IP: ${EC2_INSTANCE_IP}
-  return ${EC2_INSTANCE_IP}
 }
 
 function aws-logs() {
