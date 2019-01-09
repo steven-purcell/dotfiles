@@ -77,12 +77,12 @@ function aws-describe-instances() {
 
   if [[ ! -z "$FILTER_ENV" ]]
   then
-    result=$(echo ${result} | jq -r --arg FILTER_ENV "$FILTER_ENV" 'select(.Environment==$FILTER_ENV)')
+    result=$(echo ${result} | jq -r --arg FILTER_ENV "$FILTER_ENV" 'select(.Environment | match($FILTER_ENV;"i"))')
   fi
 
   if [[ ! -z "$FILTER_NAME" ]]
   then
-    result=$(echo ${result} | jq -r --arg FILTER_NAME "$FILTER_NAME" 'select(.Name | contains($FILTER_NAME))')
+    result=$(echo ${result} | jq -r --arg FILTER_NAME "$FILTER_NAME" 'select(.Name | match($FILTER_NAME;"i"))')
   fi
 
   echo ${result} | jq
