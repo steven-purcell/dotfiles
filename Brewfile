@@ -31,6 +31,7 @@ brew 'watch'
 brew 'awscli'
 brew 'bash'
 brew 'saw'
+brew 'go'
 
 cask 'atom'
 cask 'caffeine'
