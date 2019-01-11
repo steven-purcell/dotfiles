@@ -1,4 +1,19 @@
-function aws-getip() {
+function aws-ssh() {
+  local IP=$1
+  local REGION=$(aws configure get region)
+  local PROVISIONER=$(if [[ "${REGION}" == "us-gov-west-1" ]]; then echo "groot_provisioner.pem"; else echo "root_provisioner.pem"; fi)
+
+  ssh ec2-user@${IP} -i ~/.ssh/${PROVISIONER}
+}
+
+function aws-ssh-generate-configs() {
+  # Doesn't work for gov cloud.......................
+  # Will need to right my own maybe..................if i care that much. lets see how much i use it
+  local REGION=$(aws configure get region)
+  python3 ~/random-tools/aws-ssh-config/aws-ssh-config.py --white-list-region ${REGION} --private --prefix ${AWS_PROFILE}- > ~/.ssh/config
+}
+
+function aws-describe-instance-by-service() {
   local CLUSTER=$1
   local TASK_NAME=$2
 
@@ -14,7 +29,7 @@ function aws-getip() {
   local NUMBER_OF_TASKS=$(echo ${TASK_LIST} | jq length)
   if (( $NUMBER_OF_TASKS > 1 ))
   then
-    echo Found: ${NUMBER_OF_TASKS} tasks running. Will choose first IP in list.
+    echo Found: ${NUMBER_OF_TASKS} tasks running. Will use first task to locate one ec2 IP.
   fi
 
 
@@ -40,12 +55,7 @@ function aws-getip() {
     return
   fi
 
-  local EC2_INSTANCE_IP=$(aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} | jq -r '.Reservations[0].Instances[0].PrivateIpAddress')
-
-  echo Tasks Running: ${NUMBER_OF_TASKS}
-  echo Container Instance ARN: ${CONTAINER_INSTANCE_ARN}
-  echo ec2 Instance ID: ${EC2_INSTANCE_ID}
-  echo ec2 Instance IP: ${EC2_INSTANCE_IP}
+  aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} | jq -r '.Reservations[].Instances[] | {PrivateIpAddress} + (.Tags|from_entries) + {KeyName}'
 }
 
 function aws-logs() {
@@ -73,7 +83,7 @@ function aws-describe-instances() {
 
   local FILTER_ENV=$1
   local FILTER_NAME=$2
-  local result=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[] | {PrivateIpAddress} + (.Tags|from_entries)')
+  local result=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[] | {PrivateIpAddress} + (.Tags|from_entries) + {KeyName}')
 
   if [[ ! -z "$FILTER_ENV" ]]
   then
