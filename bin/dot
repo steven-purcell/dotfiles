@@ -19,3 +19,8 @@ brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor
 # Install software
 echo "› $ZSH/script/install"
 $ZSH/script/install
+
+# Install AWS Tools
+echo "› $ZSH/aws/install.sh"
+$ZSH/aws/install.sh 2>&1
+

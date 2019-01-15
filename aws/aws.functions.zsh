@@ -55,7 +55,7 @@ function aws-describe-instance-by-service() {
     return
   fi
 
-  aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} | jq -r '.Reservations[].Instances[] | {PrivateIpAddress} + (.Tags|from_entries) + {KeyName}'
+  aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} | jq -r '.Reservations[].Instances[] | {PublicIpAddress} + {PrivateIpAddress} + (.Tags|from_entries) + {KeyName}'
 }
 
 function aws-logs() {
@@ -83,7 +83,7 @@ function aws-describe-instances() {
 
   local FILTER_ENV=$1
   local FILTER_NAME=$2
-  local result=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[] | {PrivateIpAddress} + (.Tags|from_entries) + {KeyName}')
+  local result=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[] | {PublicIpAddress} + {PrivateIpAddress} + (.Tags|from_entries) + {KeyName}')
 
   if [[ ! -z "$FILTER_ENV" ]]
   then
