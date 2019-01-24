@@ -9,32 +9,32 @@ alias restartdb='mysql.server restart'
 alias startdb='mysql.server start'
 alias stopdb='mysql.server stop'
 
-alias ws='cd $HOME/workspace'
-alias wsp='cd $HOME/workspace/projects'
-alias winws='cd /Volumes/C/work/projects'
 #keycloak
 alias startkeycloak='docker run -p8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin jboss/keycloak'
 
 # readlink OSX
 alias readlink='greadlink'
 
-# code
+# move around
 alias ...='cd ../..'
 alias ..='cd ..'
 alias .d='cd ~/.dotfiles'
-alias apis='cd ~/code/apis'
-alias c='cd ~/code'
-alias data='cd ~/code/data'
 alias h='history'
-alias js='node'
-alias makesrc='mkdir -p ~/code/apis ~/code/data ~/code/oss ~/code/services ~/code/syncs ~/code/tmp ~/code/tools'
-alias oss='cd ~/code/oss'
 alias rf='rm -rf'
-alias serv='cd ~/code/services'
-alias src='cd ~/code'
-alias sync='cd ~/code/syncs'
-alias tmp='cd ~/code/tmp'
-alias tool='cd ~/code/tools'
+
+# tools
+alias tool='cd ~/tools'
+
+# ssm
+alias ssm-gov='cd ~/tools/ssm-parameter-store-gov; awsworkspace g2lytics-gov'
+alias ssm-pub='cd ~/tools/ssm-parameter-store-pub; awsworkspace g2lytics-pub'
+alias ssm-gov-open='ssm-gov; atom .'
+alias ssm-pub-open='ssm-pub; atom .'
+
+# workspace
+alias ws='cd $HOME/workspace'
+alias makesrc='mkdir -p ~/code/apis ~/code/data ~/code/oss ~/code/services ~/code/syncs ~/code/tmp ~/code/tools'
+alias wsp='cd $HOME/workspace/projects'
 
 # MacVim
 alias vim='mvim -v'
@@ -70,3 +70,6 @@ alias .h='vim /etc/hosts'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+#bitbucket shortcuts
+alias pull-requests='python -mwebbrowser https://bitbucket.org/dashboard/pullrequests?section=teams'

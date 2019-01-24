@@ -7,4 +7,7 @@ chmod +x /usr/local/bin/get-ssm-params
 
 # ecs-deploy - https://github.com/justmiles/ecs-deploy
 # TODO
+
+curl -f -L https://github.com/chrispruitt/go-get-ecs-services/releases/download/v1.3.0/get-ecs-services.v1.3.0.darwin-amd64 -o /usr/local/bin/get-ecs-services
+chmod +x /usr/local/bin/get-ecs-services
 #############################################################################################################################################################
